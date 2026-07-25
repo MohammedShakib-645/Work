@@ -1,0 +1,263 @@
+===============
+Date:20/07/2026 
+Topic:literals
+================
+the format in which we can express  the constant is called literal
+
+Ecamples:
+int x =65;
+        System.out.println("the value of x="+x);
+        x=0x41;
+        System.out.println("the value of x"+x);
+        x=0101;
+        System.out.println(+x);
+        x=0b1000001;
+        System.out.println(+x);
+        x=0801;
+        System.out.println(+x);
+         float f=1.889e1f;
+         char ch=0X41;
+        System.out.println(ch);
+         boolean isVerified =true;
+        System.out.println(isVerified);
+        String name="shakib";
+        System.out.println("name of the boy:"+name);
+
+//switch case exapmle// 
+
+int input=10;
+char input="A";
+float input=10.5f;
+String input="shakib"
+
+            case 1:
+                System.out.println("line 1");
+                break;
+            case 2:
+                System.out.println("line 2");
+            case 3:
+                System.out.println("line 3");
+            case 4:
+                System.out.println("line 4");  
+            default:
+                System.out.println("not defined");
+
+//using for loop condition//
+
+int arr[]={1,2,3,4,5,6,7,8,9,10};
+for(int i=0;i<arr.length;i++)
+   System.out.println(arr[i]);
+
+//only this functions is for accessing the values of array//
+
+int arr[]={1,2,3,4,5,6,7,8,9,10};
+   for (int input:arr)
+      System.out.println(input);
+      
+////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////
+
+package com.sphn;
+public class Literal {
+		/*
+		int a = 10;
+		public void displayname()
+		{
+			System.out.println("My name is Manish");
+		}
+		
+	public static void main(String[] args) {
+		System.out.println("Hi");
+		Demo demo = new Demo();
+		demo.displayname();
+		*/
+		public static void main(String[] args)
+		{
+			int x = 65;
+			System.out.println(x);
+			x = 0x41;
+			System.out.println(x);
+			x = 0101;
+			System.out.println(x);
+			x = 0b1000001;
+			System.out.println(x);
+			public class Literal {
+				/*
+				int a = 10;
+				public void displayname()
+				{
+					System.out.println("My name is Manish");
+				}
+				
+			public static void main(String[] args) {
+				System.out.println("Hi");
+				Demo demo = new Demo();
+				demo.displayname();
+				*/
+				/*
+				public static void main()
+				{
+					int x = 65;
+					System.out.println(x);
+					x = 0x41;
+					System.out.println(x);
+					x = 0101;
+					System.out.println(x);
+					x = 0b1000001;
+					System.out.println(x);
+				*/
+			public static void main()
+			{
+			    /*
+			    float f = 18.89f;
+			    System.out.println(f);
+			    System.out.println(1.889 * Math.pow(10,2));
+			    */
+			    /*
+			    char ch = 'A';
+			    System.out.println(ch);
+			    ch = 0x41;
+			    System.out.println(ch);
+			    ch = 0101;
+			    System.out.println(ch);
+			    ch = 0b1000001;
+			    System.out.println(ch);
+			    */
+			    /*
+			    boolean isverified = true;
+			    System.out.println("The value of ch is "+isverified);
+			    String name = "Manish";
+			    System.out.println("Name is "+name);
+			    */
+			    /*
+			    The below program is static, because it never changes and does not depend on user input
+			    */
+			    /*
+			    System.out.println("Start of the program");
+			    System.out.println("Line 1");
+			    System.out.println("Line 2");
+			    System.out.println("Line 3");
+			    System.out.println("Line 4");
+			    System.out.println("Line 5");
+			    System.out.println("Line 6");
+			    System.out.println("Line 7");
+			    System.out.println("Line 8");
+			    System.out.println("Line 9");
+			    System.out.println("Line 10");
+			    System.out.println("End of Program");
+			    */
+			    /*
+			    We need to have control on the flow of execution of program. Because we need to have a
+			    code such that it is always dynamically run as per the user input
+			    Control constructs are special statements used to gain control over the flow of execution of the program
+			    For dynamically running the program, these are essential
+			    1. Iterative constructs
+			       while loops, for loops, do while loops
+			    2. Conditional constructs
+			        if loops, if else loops, nested if loops, nested if else loops
+			    3. Selection constructs
+			        break,continue, switch statements?
+			    */
+			    /*
+			    if(expression) the expression must return a boolean value - True or False
+			    {
+			        body of code
+			    }
+			    */
+			    /*
+			    boolean isVerified = false;
+			    if(isVerified)
+			    {
+			        System.out.println("User is verified");
+			    }
+			    else
+			    {
+			        System.out.println("User is not verified");
+			    }
+			    */
+			     /*
+			     In switch statement, the expression should evaluate to int type values
+			     After that , it will match it with the cases
+			     */
+			     // int input = 10;
+			     // char input = 'A' will be executed as per the ASCII value of the 'A'
+			     // float input = 10.5f will not be executed as it can't be converted to int
+			     // String hello = "Hello" will not execute as the cases cannot be converted to string
+			     // Switch is a special conditional construct
+			     // floating point values are not allowed in selection statement else the time efficiency will decrease significantly
+			     // do while loop is minimum guaranteed loop, as it will be executed atleast once.
+			     /*
+			     Iterations are of 3 types:
+			     while loop, for loop and do while loop
+			     while and for loops are entry controlled
+			     Definite,Indefinite , minimum guaranteed loops
+			     Definite -> fixed no of times
+			     Indefnite -> We never know when it will stop
+			     Infinite -> The program will never stop and it may result in program termination
+			     */
+			     /*
+			    switch(a) //The expression in brackets must evaluate to integer type value
+			    {
+			    case 1:
+			        System.out.println("Line 1");
+			        break;
+			    case 2:
+			        System.out.println("Line 2");
+			        break;
+			    default:
+			        System.out.println("Invalid Input");
+			   */
+			   int arr[] = {1,2,3,4,5,6,7,8,9,10};
+			   // enhanced for loop
+			   // the below program is best for accessing the elemnts of array
+			   for(int input: arr)
+			   {
+			       System.out.println(input);
+			   }
+			}
+		}
+	}
+	}
+==================================================================================================
+==================================================================================================
+date:22/07/2026
+day:wednesday
+////////////
+
+Control constraints;
+1)control construct
+2)s
+3)Iterations
+
+Functionality:
+operators:which perform operations
+1)arithmatic operators
+2)relational operators
+3)logical operators
+4)bitwise operators
+
+No of operands:
+1)uinary operators
+2)binary operators
+3)ternary operators
+
+operators:that performs operations:
+exapmle1:int add(inta,intb)
+Ex2:sum=i+j
+
+data types->size,legal constraints
+1)functon is actually a user defined operators.
+2)operators are predefined by the developer.
+
+var args->variable arguments.
+>>>=:unsigned operators
+
+expression->the legal combinations of operators and operands which finally returns a single value is called expression
+1)example:a+b
+statement->instruction given to the computer to perform a spacific task.
+1)exapmle:System.out.println("hello world")
+
+
+
+
+
