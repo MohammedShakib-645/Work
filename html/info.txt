@@ -1,0 +1,39 @@
+date:23/07/2026
+===============
+Primitive data types;
+String data types:
+\\\\\\\\\\\\\\\\\
+1.String ->group of characters ="moin"
+2.Number->integer ,float values =-10,
+3.Boolean->true/false
+4.Null
+5.Undefined
+6.Symbol
+7.Bignit
+
+Example:
+var x=Null;
+var x=Symbol();
+
+8.Object var user={name:"moin",age:25}
+
+========
+literal:
+========
+String literal
+Number literal
+Null
+Undefined
+onject {}
+array[]
+regEX: /abc/
+template literals
+
+${}
+
+============================================
+============================================
+Functions:in java script
+1.Arrow Function
+Ex:
+var res=(a+b)

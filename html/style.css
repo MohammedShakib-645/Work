@@ -1,0 +1,50 @@
+h1
+{
+    text-align: center;
+    font-size: 35px;
+}
+img{
+    width: 70px;
+    height: 70px;
+    vertical-align: middle;
+}
+body{
+    color:black;
+    background-color:antiquewhite;
+}
+h3{
+    text-align: center;
+    color:rgb(184, 61, 30);
+    background-color:aqua;
+}
+p{
+    width: 80%;
+    margin: auto;
+    text-align: justify;
+    line-height: 25px;
+}
+h2{
+    color:black;
+    text-align: center;
+}
+form
+{
+    width: 400px;
+    margin:auto;
+}
+input,select{
+    padding: 2px;
+    border: 1px solid black;
+}
+input[type="submit"]{
+    background:blue;
+    border:2px solid black ;
+    color: white;
+    padding: 8px;
+}
+input[type="reset"]{
+    background: blue;
+    border: 2px solid black;
+    color: white;
+    padding: 8px;
+}

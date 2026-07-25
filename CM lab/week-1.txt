@@ -1,0 +1,19 @@
+week=1
+
+Aim=to find real  and complex eigen values of a matrix
+
+Algorithm 
+
+1)start 
+
+2)import numpy library
+
+3)define the square matrix A using a numpy
+
+4)check whether the matrix is n*n, if not 
+
+5)use numpy.linalg.eigvlas(A) to compute 
+
+6)display the eigen values
+
+7)stop

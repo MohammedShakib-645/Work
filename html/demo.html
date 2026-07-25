@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Class Demo: HTML & CSS Elements</title>
+
+    <style>
+        /* ==========================================
+       CSS STYLING (The Look)
+       ========================================== */
+
+        /* Element Selector: Styling the base page layout */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            /* Font Property */
+            color: #333333;
+            /* Text Color Property */
+            background-color: #f4f7f6;
+            /* Background Color Property */
+            margin: 20px;
+            /* Outer Box Model Spacing */
+            padding: 10px;
+            /* Inner Box Model Spacing */
+        }
+
+        /* ID Selector: Targets a single unique element */
+        #main-header {
+            text-align: center;
+            /* Text Alignment Property */
+            color: #2c3e50;
+            font-size: 32px;
+            /* Font Size Property */
+        }
+
+        /* Class Selector: Targets elements with class="highlight" */
+        .highlight {
+            background-color: #f1c40f;
+            /* Yellow highlight background */
+            padding: 2px 5px;
+        }
+
+        /* Box Model Demo Card Container */
+        .content-box {
+            background-color: #ffffff;
+            width: 80%;
+            /* Width Property */
+            margin: 20px auto;
+            /* Centers the box on the page */
+            padding: 20px;
+            /* Creates space inside the border */
+            border: 1px solid #dddddd;
+            /* Border Property */
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th,
+        td {
+            border: 1px solid #cccccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #2c3e50;
+            color: white;
+        }
+
+        /* Form Layout Styling */
+        form {
+            background-color: #eef2f3;
+            padding: 20px;
+            border: 1px solid #bdc3c7;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            /* Ensures padding doesn't break layout width */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ==========================================
+       HTML STRUCTURE (The Skeleton)
+       ========================================== -->
+
+    <!-- Document Structure & Text Formatting -->
+    <h1 id="main-header">Welcome to Our HTML & CSS Demo</h1>
+    <p style="text-align: center;">Demonstrating structure, styling, media, tables, and forms in one file.</p>
+
+    <hr> <!-- Horizontal line separator -->
+
+    <!-- Container Box (Used to demonstrate the CSS Box Model) -->
+    <div class="content-box">
+        <h2>1. Text Formatting & Media</h2>
+        <p>This is a standard paragraph element. We can use <strong>strong/b tags for bold emphasis</strong> or <em>em/i
+                tags for italic text</em>. Sometimes we need a quick line break <br> to move text directly to the next
+            line.</p>
+
+        <p>We can also add a <span class="highlight">class selector to highlight</span> specific spans of text.</p>
+
+        <h3>Hyperlink & Image Preview:</h3>
+        <!-- Hyperlink Example -->
+        <p>Visit the <a href="https://www.google.com/" target="_blank">Google website</a> to test out an external anchor
+            link.</p>
+
+        <!-- Image Example -->
+        <img src="demo.jpeg" width="420" height="100" alt="No Image Available Placeholder">
+    </div>
+
+    <!-- Lists Section -->
+    <div class="content-box">
+        <h2>2. Lists Organization</h2>
+
+        <h3>Unordered List (Bullet Points)</h3>
+        <ul>
+            <li>HTML creates the skeleton structure</li>
+            <li>CSS adds the layout presentation and colors</li>
+            <li>JavaScript adds the interactive features</li>
+        </ul>
+
+        <h3>Ordered List (Sequential Numbers)</h3>
+        <ol>
+            <li>Open your code editor</li>
+            <li>Write your structure in HTML</li>
+            <li>Apply your presentation layer with CSS</li>
+        </ol>
+    </div>
+
+    <!-- Tables Section -->
+    <div class="content-box">
+        <h2>3. Structured Data Table</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Language</th>
+                    <th>Type</th>
+                    <th>Primary Purpose</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>HTML</td>
+                    <td>Markup</td>
+                    <td>Document Structure & Skeletal Foundation</td>
+                </tr>
+                <tr>
+                    <td>CSS</td>
+                    <td>Stylesheet</td>
+                    <td>Visual Presentation, Colors, & Spacing</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Forms Section -->
+    <div class="content-box">
+        <h2>4. Interactive Data Collection Form</h2>
+        <form action="#" method="POST">
+
+            <div class="form-group">
+                <label for="username">Name (Text Input):</label>
+                <input type="text" id="username" placeholder="Enter your full name">
+            </div>
+
+            <div class="form-group">
+                <label for="useremail">Email Input:</label>
+                <input type="email" id="useremail" placeholder="name@example.com">
+            </div>
+
+            <div class="form-group">
+                <label for="userpass">Password Input:</label>
+                <input type="password" id="userpass" placeholder="Enter secure password">
+            </div>
+
+            <div class="form-group">
+                <label>Radio Options (Choose One):</label>
+                <input type="radio" id="html-choice" name="fav-lang" value="html">
+                <label style="display:inline; font-weight:normal;" for="html-choice">HTML</label>
+
+                <input type="radio" id="css-choice" name="fav-lang" value="css">
+                <label style="display:inline; font-weight:normal;" for="css-choice">CSS</label>
+            </div>
+
+            <div class="form-group">
+                <input type="checkbox" id="subscribe" value="yes">
+                <label style="display:inline; font-weight:normal;" for="subscribe">Subscribe to class coding
+                    updates?</label>
+            </div>
+
+            <div class="form-group">
+                <label for="experience">Select Experience Level:</label>
+                <select id="experience">
+                    <option value="beginner">Beginner (First Time)</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="advanced">Advanced</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="comments">Comments (Textarea):</label>
+                <textarea id="comments" rows="4" placeholder="Write your message here..."></textarea>
+            </div>
+
+            <input type="submit" value="Submit Form Data">
+        </form>
+    </div>
+
+</body>
+
+</html>

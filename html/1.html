@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+  <title>Class Demo: Plain HTML Structure</title>
+</head>
+<body>
+
+  <!-- Document Structure & Text Formatting -->
+  <h1>Welcome to Our HTML & CSS Demo</h1>
+  <p>Demonstrating structure, styling, media, tables, and forms in separate files.</p>
+  
+  <hr> <!-- Horizontal line separator -->
+  <marquee behavior="scroll" direction="right" direction="" scrollamount="10" bgcolor="lightblue" >
+    This text bounces to the right!
+  </marquee>
+  <!-- Container Box -->
+  <div>
+    <h2>1. Text Formatting & Media</h2>
+    <p>This is a standard paragraph element. We can use <strong>strong/b tags for bold emphasis</strong> or <em>em/i tags for italic text</em>. Sometimes we need a quick line break <br> to move text directly to the next line.</p>
+    
+    <p>We can also add a tags to highlight specific spans of text.</p>
+
+    <h3>Hyperlink & Image Preview:</h3>
+    <!-- Hyperlink Example -->
+    <p>Visit the <a href="https://www.google.com/" target="_blank">Google website</a> to test out an external anchor link.</p>
+    
+    <!-- Image Example -->
+     
+    <a img src="https://yt3.googleusercontent.com/bAseQlKvNmjdLQrvYWm_q3QDp8C8YKyYI-nYJewgOkPi0JU1_3X9oFgjrEdzkOlXzLGFxFbnsw=s900-c-k-c0x00ffffff-no-rj"> width="100" height="100" alt="No Image Available Placeholder">
+  </div>
+
+  <!-- Lists Section -->
+  <div>
+    <h2>2. Lists Organization</h2>
+    
+    <h3>Unordered List (Bullet Points)</h3>
+    <ul>
+      <li>HTML creates the skeleton structure</li>
+      <li>CSS adds the layout presentation and colors</li>
+      <li>JavaScript adds the interactive features</li>
+    </ul>
+
+    <h3>Ordered List (Sequential Numbers)</h3>
+    <ol>
+      <li>Open your code editor</li>
+      <li>Write your structure in HTML</li>
+      <li>Apply your presentation layer with CSS</li>
+    </ol>
+  </div>
+
+  <!-- Tables Section -->
+  <div>
+    <h2>3. Structured Data Table</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Language</th>
+          <th>Type</th>
+          <th>Primary Purpose</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>HTML</td>
+          <td>Markup</td>
+          <td>Document Structure & Skeletal Foundation</td>
+        </tr>
+        <tr>
+          <td>CSS</td>
+          <td>Stylesheet</td>
+          <td>Visual Presentation, Colors, & Spacing</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Forms Section -->
+  <div>
+    <h2>4. Interactive Data Collection Form</h2>
+    <form action="demo.html" method="POST">
+      
+      <div>
+        <label for="username">Name (Text Input):</label>
+        <input type="text" id="username" placeholder="Enter your full name">
+      </div>
+
+      <div>
+        <label for="useremail">Email Input:</label>
+        <input type="email" id="useremail" placeholder="name@example.com">
+      </div>
+
+      <div>
+        <label for="userpass">Password Input:</label>
+        <input type="password" id="userpass" placeholder="Enter secure password">
+      </div>
+
+      <div>
+        <label>Radio Options (Choose One):</label>
+        <input type="radio" id="html-choice" name="fav-lang" value="html">
+        <label for="html-choice">HTML</label>
+        
+        <input type="radio" id="css-choice" name="fav-lang" value="css">
+        <label for="css-choice">CSS</label>
+      </div>
+
+      <div>
+        <input type="checkbox" id="subscribe" value="yes">
+        <label for="subscribe">Subscribe to class coding updates?</label>
+      </div>
+
+      <div>
+        <label for="experience">Select Experience Level:</label>
+        <select id="experience">
+          <option value="beginner">Beginner (First Time)</option>
+          <option value="intermediate">Intermediate</option>
+          <option value="advanced">Advanced</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="comments">Comments (Textarea):</label>
+        <textarea id="comments" rows="4" placeholder="Write your message here..."></textarea>
+      </div>
+
+      <input type="submit" value="Submit Form Data">
+    </form>
+  </div>
+  
+<html>
+
+</html>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function demo</title>
+    <style>
+        #para {
+            font-size: 100px;
+            font-weight: bold;
+            color: rgb(221, 167, 195);
+            text-align: center;
+
+        }
+        body{
+            background-color: rgb(25, 6, 238);
+        }
+        head{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <p id="para"></p>
+    <script>
+        let sayHello = () => "Mohammed shakib";
+        document.getElementById("para").innerHTML = sayHello(); 
+    </script>
+</body>
+</html>
