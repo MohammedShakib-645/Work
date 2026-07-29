@@ -1,7 +1,7 @@
-===============
+==============================================================================
 Date:20/07/2026 
 Topic:literals
-================
+==============================================================================
 the format in which we can express  the constant is called literal
 
 Ecamples:
@@ -258,6 +258,135 @@ statement->instruction given to the computer to perform a spacific task.
 1)exapmle:System.out.println("hello world")
 
 
+================================================================================================
+================================================================================================
+DATE=27/07/2026
+==============
+Function and method
+both are same just the difference is that method is written in classes
 
+>---Method Signature---<
+in the program:
+Public static void main(String [] args){
+
+}
+the main is the signature of the method
+Method Signature: name parameter list 
+now lets write a program
+-----------------------------------
+Public class demo{
+	public static void main(String[] args)
+	int result=add(10,20);
+	System.out.println(Result);
+}
+int add(inta,int b){
+	return a+b;
+}
+}
+----------------------------------
+**This Will give the below Error**
+Demo.java:3 error:non-Static method add(int,int) cannot be referenced from a static context
+int result=add(10,20);
+
+This is because our main class is static and our int add is not static thus 
+we cannot call from a static method to a non-static method
+//use static int add(int a,int b){}
+==lets understand more detailed about signature
+--------------------------------------
+public class Demo{
+	public static void main(string[] args){
+		int result=add(10,20);
+		System.out.println(result);
+	}
+    public static int add(int a,int b){
+		return a+b;
+	}
+	public static void add(int i,int j){
+
+	}
+}
+-------------------------------------------------
+***This will give the below eoor***
+Demo.java:9:eoor :method add(int,int) is already defined in class demo
+Public static void add(int a,int b){}
+
+Thus the method having two parameters or 3 parameters are different methods because they have different Signature
+thus the mathods are called as overloaded method
+**what we can do is:
+change the parameter list in second method
+==ie.change the parameter list 
+==ie. change the parameter data types
+
+---examples---
+--------------------------------------------------------
+public class Demo{
+	public static void main(string[] args){
+		int result=plus(10,20);
+		System.out.println(result);
+	}
+	publis static void plus(int a,int b){
+		return a+b;
+	}
+	public static void plus(int i,int j,int x){
+
+	}
+	public static in plus(long 11,log 12){
+		return (int)(11+12);
+	}
+}
+---------------------------------------------------------------
+/// The above program will run without any error\\\\\
+""The second method is running with 3 parameters 
+""the third method is running with different parameters data types
+This is called as method overloading
+
+=================================================================================
+=================================================================================
+date:29/07/2026
+===============
+
+public class demo2 {
+    public static void main(String[] args) {
+        System.out.println("from the begin of main.......");
+        int values[] = { 1, 2,3,4,5,6,7,8,9,10};
+        float values1[]={1,2,3,4,5,6,7,8,9,10};
+        for(int count=0;count<values.length;count++)
+        {
+            System.out.println(values[count]);
+        }
+       
+       /* for (int count = 0; count<values.length;count++) {
+            System.out.println(values[count]);
+        }*/
+       for(int i:values){
+        System.out.println(i);
+       }
+
+        System.out.println("from end of main......");
+    }
+}
+------------------------------------------------------------
+public class demo3 {
+    public static void main(String[] args) {
+       /*  double values[]=new double[10];
+        float values1[]=new float[10];
+
+        for(double i:values){
+            System.out.println(i);
+        }
+        for(float i:values1){
+            System.out.println(i);
+        }*/
+       
+       /*
+       int values[]={1,2,3,4,5,6,7};
+       for(int count=0;count<values.length;count++){
+        System.out.println(values[count]);
+        */
+       }
+
+    }
+}
+-----------------------------------------------
 
 

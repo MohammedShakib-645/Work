@@ -37,3 +37,4 @@ Functions:in java script
 1.Arrow Function
 Ex:
 var res=(a+b)
+

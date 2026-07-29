@@ -1,0 +1,48 @@
+//objects , Arrays, &json
+//language API's
+Text based from 
+product name
+color
+quality
+=================================
+JSON->javascript object notation.
+================================
+JSON 
+
+//how we can write object 
+let student =
+{ name:"Ramu",
+  roll no:101,
+  marks:88
+}
+-------------------------------------
+Arrays->collection of same data types
+--------------------------------------
+let color=["red"."black","blue"];
+let classroom={class Name:"CSE",
+               No of Student:54,
+
+               }
+StudentList=[
+    {Name:"ramu",roll no:22}
+];
+In json:
+  object is convert into text format .
+  object is converted to text format using the json.stringify();
+  text is converted to the object by using the JSON.parse();
+---------------------------------------------------
+in javascript :==(lose quality)
+                5=="5";//true, chaekc only the values
+            ===(strict quality)
+            5==="5"//false ,check both values and datatypes
+
+====================================================
+Smart Watch
+productTitle (string)
+price in rupees (Number)
+Availability (boolean)
+color (array)
+seller (object :name,address)
+               
+
+
