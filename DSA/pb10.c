@@ -28,7 +28,7 @@ int main()
     if(found)
         printf("Student Found");
     else
-        printf("Student Not Found");
+        printf("not found");
 
     return 0;
 }
