@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator App</title>
+</head>
+
+<body>
+    <h1>Calculator App</h1>
+    <label for="num1"> First number:</label>
+    <input type="number" id="num1"><br><br>
+    <label for="num2"> Second number:</label>
+    <input type="number" id="num2"><br><br>
+    <button onclick="addition()">Addition</button>
+    <p id="add">addition:</p>
+    <button onclick="Max()">max</button>
+    <p id="Max">max:</p>
+    <button onclick="Min()">min</button>
+    <p id="Min">min:</p>
+    <button onclick="print()">print numbers</button>
+    <p id="print numbers">print Numbers</p>
+    <script>
+        function addition() {
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+            let res = a + b;
+            document.getElementById("add").innerText = `addition:${res}`;
+        }
+        function Max() {
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+            if (a > b) {
+                document.getElementById("Max").innerText = `max:${a}`;
+            } else {
+                document.getElementById("Max").innerText = `max:${b}`;
+            }
+        }
+        function Min() {
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+            if (a < b) {
+                document.getElementById("Min").innerText = `min:${a}`;
+            } else {
+                document.getElementById("Min").innerText = `min:${b}`;
+            }
+        }
+        function print() {
+            let a = document.getElementById("num1").value;
+            let b = document.getElementById("num2").value;
+            let i = 0;
+            for (let i = a; i <= b; i++) {
+                document.getElementById("print numbers").innerText += `${i}\n`;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
