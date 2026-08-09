@@ -1,0 +1,7 @@
+Problem Statement (Problem 8):
+Place 3 security cameras at different 1D grid points such that the distance between the 1st and 3rd camera is exactly K (points[k] - points[i] == K).
+
+Constraints:
+- N: 3 <= N <= 300
+- K: 1 <= K <= 10^5
+- Coordinates: 0 <= X_i <= 10^5 (strictly sorted)

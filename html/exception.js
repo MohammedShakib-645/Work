@@ -1,12 +1,13 @@
 import fs from 'node:fs/promises';
 
-async function createLog() {
+function createLog() {
   try {
-    await fs.writeFile('log.txt', 'system started successfully\n');
+    fs.writeFileSync("log.txt", 'system started successfully\n');
+    console.log("file created successfully");
   } catch (err) {
-    console.error('error! Writing file', err);
+    console.error("error! Writing file", err);
   }
 }
 
-console.log('file creation using writeFile');
+console.log("this is the synchronous file");
 createLog();
