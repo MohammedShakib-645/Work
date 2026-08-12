@@ -21,6 +21,7 @@ public class smarAtm {
         }
         if (attempts == 0) {
             System.out.println("Your card is blocked:");
+            sc.close();
             return;
         }
         while (true) {
@@ -51,6 +52,7 @@ public class smarAtm {
                     break;
                 case 4:
                     System.out.println("exit");
+                    sc.close();
                     return;
                 default:
                     System.out.println("incorrect pin");
