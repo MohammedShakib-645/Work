@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class Dem {
     public static void main(String args[]) {
         /*
@@ -15,12 +13,10 @@ public class Dem {
          * System.out.println("The given mail is invallid!!");
          * }
          * }
-         * else{ 
+         * else{
          * System.out.println("The given mail is invallid!!");
          * }
          */
 
-        clock c = new clock();
-        
     }
 }
