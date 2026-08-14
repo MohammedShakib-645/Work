@@ -29,7 +29,7 @@ class clock {
     private int seconds;
 
     public clock() {
-        this(10, 10, 35);
+        this(13, 14, 55);
     }
 
     public clock(int value) {
