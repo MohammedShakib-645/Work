@@ -4,58 +4,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator App</title>
+    <title>Simple Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .calc {
+            background: #ffffff;
+            border: 2px solid #d9d9d9;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 0;
+            color: #333;
+        }
+
+        input {
+            width: 260px;
+            padding: 12px;
+            margin: 8px 0;
+            font-size: 16px;
+            border: 1px solid #bbb;
+            border-radius: 6px;
+            display: block;
+        }
+
+        .row {
+            display: flex;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        button {
+            flex: 1;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 18px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        #result {
+            border: double;
+            margin-top: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 34px;
+            padding: 10px;
+
+
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Calculator App</h1>
-    <label for="num1"> First number:</label>
-    <input type="number" id="num1"><br><br>
-    <label for="num2"> Second number:</label>
-    <input type="number" id="num2"><br><br>
-    <button onclick="addition()">Addition</button>
-    <p id="add">addition:</p>
-    <button onclick="Max()">max</button>
-    <p id="Max">max:</p>
-    <button onclick="Min()">min</button>
-    <p id="Min">min:</p>
-    <button onclick="print()">print numbers</button>
-    <p id="print numbers">print Numbers</p>
+    <div class="calc">
+        <h2>Simple Calculator</h2>
+
+        <input type="number" id="num1" placeholder="First number">
+        <input type="number" id="num2" placeholder="Second number">
+
+        <div class="row">
+            <button onclick="add()">+</button>
+            <button onclick="sub()">-</button>
+            <button onclick="mul()">×</button>
+            <button onclick="div()">÷</button>
+        </div>
+
+        <div id="result" placeholder="Result">
+            <label for="result">Result:</label>
+
+        </div>
+    </div>
+
     <script>
-        function addition() {
+        function add() {
             let a = Number(document.getElementById("num1").value);
             let b = Number(document.getElementById("num2").value);
-            let res = a + b;
-            document.getElementById("add").innerText = `addition:${res}`;
+            document.getElementById("result").innerText = "Result: " + (a + b);
         }
-        function Max() {
+
+        function sub() {
             let a = Number(document.getElementById("num1").value);
             let b = Number(document.getElementById("num2").value);
-            if (a > b) {
-                document.getElementById("Max").innerText = `max:${a}`;
-            } else {
-                document.getElementById("Max").innerText = `max:${b}`;
-            }
+            document.getElementById("result").innerText = "Result: " + (a - b);
         }
-        function Min() {
+
+        function mul() {
             let a = Number(document.getElementById("num1").value);
             let b = Number(document.getElementById("num2").value);
-            if (a < b) {
-                document.getElementById("Min").innerText = `min:${a}`;
-            } else {
-                document.getElementById("Min").innerText = `min:${b}`;
-            }
+            document.getElementById("result").innerText = "Result: " + (a * b);
         }
-        function print() {
-            let a = document.getElementById("num1").value;
-            let b = document.getElementById("num2").value;
-            let i = 0;
-            for (let i = a; i <= b; i++) {
-                document.getElementById("print numbers").innerText += `${i}\n`;
+
+        function div() {
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+
+            if (b === 0) {
+                document.getElementById("result").innerText = "Result: Cannot divide by zero";
+                return;
             }
+
+            document.getElementById("result").innerText = "Result: " + (a / b);
         }
     </script>
-
 </body>
 
 </html>
