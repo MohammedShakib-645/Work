@@ -37,7 +37,7 @@ class clock {
     }
 
     public clock(int hours, int minutes, int seconds) {
-        if (hours >= 0 && hours <= 23 && minutes >= 0 && minutes <= 59 && seconds >= 0 && seconds <= 59) {
+        if (hours < 0 || hours > 23 || minutes < 0 || minutes > 59 || seconds < 0 || seconds > 59) {
             this.hours = hours;
             this.minutes = minutes;
             this.seconds = seconds;
