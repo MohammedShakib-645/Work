@@ -1,7 +1,8 @@
-public class living {
-    public abstract class Living extends matter{
-        public Living(){
-            System.out.println("Living is matter");
-        }
+public class living extends matter {
+    public living(float mass, float volume) {
+        super(mass, volume);
+        System.out.println("Living is matter");
+
     }
+
 }
