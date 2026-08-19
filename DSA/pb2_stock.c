@@ -3,15 +3,15 @@
 
 int maxProfit(int p[], int n) {
     int minPrice = p[0];
-    int maxPro = 0;
+    int maxPrice = 0;
     for (int i = 1; i < n; i++) {
         if (p[i] < minPrice) {
             minPrice = p[i];
-        } else if (p[i] - minPrice > maxPro) {
-            maxPro = p[i] - minPrice;
+        } else if (p[i] - minPrice > maxPrice) {
+            maxPrice = p[i] - minPrice;
         }
     }
-    return maxPro;
+    return maxPrice;
 }
 
 int main() {
