@@ -37,4 +37,34 @@ Functions:in java script
 1.Arrow Function
 Ex:
 var res=(a+b)
+===========================================
+==========================================
+date:19/08/2026
+node js
+Authentication :validate the user
+Authorization
 
+Module
+------
+group of similar functions or modules.
+
+how to export :
+we need to use export function add(a,b)
+{
+    return a+b;
+}
+function sub()
+function  divide()
+
+how to import:
+we need to use import function 
+import {add,sub} from math.js
+
+----------
+os(operating system)
+path
+fs(file system module)
+http
+
+const os=require('os')
+console.log(os type())
