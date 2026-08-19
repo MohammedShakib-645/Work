@@ -1,7 +1,7 @@
 public class male extends humanBeing {
     public male(float mass, float volume, float height, String gender, String name) {
         super(mass, volume, height, gender, name);
-        System.out.println("Male is human being");
+        System.out.println("Male is created....");
     }
 
     public static void main(String[] args) {
