@@ -1,7 +1,7 @@
 public class validator {
     public void checkUserName(String name)  throws invalidUserNameException {
 
-        if (name.contains("@") || name.contains("/")) {
+        if (name.contains("@")) {
             throw new invalidUserNameException("Name should not have @ or /");
         }
     }
