@@ -5,7 +5,7 @@ NO=float(input("Enter the Next temperature of the body="))
 tO=float(input("Enter the next Time="))
 c=N-T
 k=mt.log((NO-T)/c)/-tO
-print(f"The cooling constant k={k:.4f}")
+print(f"The cooling constant k={k:.4f}")                                                                                                                                                                                                                                                                                                                                                        
 print("Enter 1 to calculate temperature of the body if time is given=")
 print("Enter 2 to calculate time if temperature of the body is given=")
 choice=int(input("Enter 1(or) 2="))
