@@ -228,15 +228,19 @@ Control constraints;
 1)control construct
 2)s
 3)Iterations
-
+===============
 Functionality:
+===============
+
 operators:which perform operations
 1)arithmatic operators
 2)relational operators
 3)logical operators
 4)bitwise operators
 
+===============
 No of operands:
+===============
 1)uinary operators
 2)binary operators
 3)ternary operators
@@ -645,5 +649,11 @@ Exception in thread "main" java.lang.IllegalArgumentException: invalid values to
         at clock.<init>(clock.java:20)
         at DemoClock.main(DemoClock.java:13)
 
-//perfect!
+//perfect 
+A method wothout body is called abstract
+===============================================================================
+===============================================================================
+date:21/09/2026
+===============
 
+t

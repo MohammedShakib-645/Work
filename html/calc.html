@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Calculator</title>
-    <style>
+<style>
         body {
-            font-family: Arial, sans-serif;
+           font-family: Arial, sans-serif;
             background: #f2f2f2;
             display: flex;
             justify-content: center;
@@ -78,10 +78,11 @@
         <input type="number" id="num2" placeholder="Second number">
 
         <div class="row">
-            <button onclick="add()">+</button>
-            <button onclick="sub()">-</button>
-            <button onclick="mul()">×</button>
+            <button onclick="add('+')">+</button>
+            <button onclick="sub('-')">-</button>
+            <button onclick="mul('x')">×</button>
             <button onclick="div()">÷</button>
+            <button onclick="printNums()">Result</button>
         </div>
 
         <div id="result" placeholder="Result">
@@ -120,6 +121,18 @@
 
             document.getElementById("result").innerText = "Result: " + (a / b);
         }
+        function printNums() {
+                let a = Number(document.getElementById("num1").value);
+                let b = Number(document.getElementById("num2").value);
+                let result = "";
+
+                for (let i = a; i <= b; i++) {
+                    result += i + "<br>";  
+                }
+
+                document.getElementById("result").innerHTML = "Result:<br>" + result;
+            }
+
     </script>
 </body>
 
