@@ -1,8 +1,9 @@
 const express = require("express");
 const { default: mongoose } = require("mongoose");
-
 const app = express();
-
+const student =express();
+const port=5000;
+student.use(express.urlencoded({extended:true}));
 let employee = [];
 
 // Middleware to read form data
@@ -13,6 +14,46 @@ mongoose
 .connect("mongodb://127.0.0.1:27017/schoolDB")
 .then(()=>console.log("Connected to MongoDB successfully!"))
 .catch((err)=>console.error("Database connection error",err))
+
+//schema & Model Definition
+
+const studentSchema=new mongoose.Schema({
+    name:{
+        type:String,
+        required:true,
+    },
+    rollNumber:{
+        type:Number,
+        required:true,
+        unique:true,
+    },
+});
+
+const Student=mongoose.model("student",studentSchema);
+
+//Home 
+
+student.get("/students",async(req, res)=>{
+    try{
+        const students=await Student.find();
+        const sdata = students
+            .map((s, index) => `<p>${index + 1}. <b>${s.name}</b> | Roll No: ${s.rollNumber}</p>`)
+            .join("");
+
+        res.send(`
+            <!DOCTYPE html>
+            <html>
+                <head><title>Students</title></head>
+                <body>
+                    <h1>Students</h1>
+                    ${sdata}
+                </body>
+            </html>
+        `);
+    } catch (err) {
+        res.status(500).send("Error loading students");
+    }
+});
 
 // Home Page
 app.get("/", (req, res) => {
