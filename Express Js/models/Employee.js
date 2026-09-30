@@ -2,11 +2,11 @@ const mongoose=require('mongoose')
 const employeeSchema=new mongoose.Schema({
     name:{
         type:String,
-        required:TextTrackCue
+        required:true
     },
     email:{
         type:String,
-        required:trusted
+        required:true
     },
     phone:{
         type:Number,
