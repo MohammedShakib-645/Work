@@ -17,7 +17,5 @@ public class demo {
         System.out.println(isVerified);
         String name="shakib";
         System.out.println("name of the boy:"+name);
-
-
     }
 }

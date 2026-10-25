@@ -1,7 +1,7 @@
-==============================================================================
+===============
 Date:20/07/2026 
 Topic:literals
-==============================================================================
+================
 the format in which we can express  the constant is called literal
 
 Ecamples:
@@ -228,19 +228,15 @@ Control constraints;
 1)control construct
 2)s
 3)Iterations
-===============
-Functionality:
-===============
 
+Functionality:
 operators:which perform operations
 1)arithmatic operators
 2)relational operators
 3)logical operators
 4)bitwise operators
 
-===============
 No of operands:
-===============
 1)uinary operators
 2)binary operators
 3)ternary operators
@@ -262,398 +258,20 @@ statement->instruction given to the computer to perform a spacific task.
 1)exapmle:System.out.println("hello world")
 
 
-================================================================================================
-================================================================================================
-DATE=27/07/2026
-==============
-Function and method
-both are same just the difference is that method is written in classes
+javap java.lang.String
 
->---Method Signature---<
-in the program:
-Public static void main(String [] args){
 
-}
-the main is the signature of the method
-Method Signature: name parameter list 
-now lets write a program
------------------------------------
-Public class demo{
-	public static void main(String[] args)
-	int result=add(10,20);
-	System.out.println(Result);
-}
-int add(inta,int b){
-	return a+b;
-}
-}
-----------------------------------
-**This Will give the below Error**
-Demo.java:3 error:non-Static method add(int,int) cannot be referenced from a static context
-int result=add(10,20);
 
-This is because our main class is static and our int add is not static thus 
-we cannot call from a static method to a non-static method
-//use static int add(int a,int b){}
-==lets understand more detailed about signature
---------------------------------------
-public class Demo{
-	public static void main(string[] args){
-		int result=add(10,20);
-		System.out.println(result);
-	}
-    public static int add(int a,int b){
-		return a+b;
-	}
-	public static void add(int i,int j){
 
-	}
-}
--------------------------------------------------
-***This will give the below eoor***
-Demo.java:9:eoor :method add(int,int) is already defined in class demo
-Public static void add(int a,int b){}
+this.hours = hours;
+        this.minutes = minutes;
+        this.seconds = seconds;
+        }else{
 
-Thus the method having two parameters or 3 parameters are different methods because they have different Signature
-thus the mathods are called as overloaded method
-**what we can do is:
-change the parameter list in second method
-==ie.change the parameter list 
-==ie. change the parameter data types
-
----examples---
---------------------------------------------------------
-public class Demo{
-	public static void main(string[] args){
-		int result=plus(10,20);
-		System.out.println(result);
-	}
-	publis static void plus(int a,int b){
-		return a+b;
-	}
-	public static void plus(int i,int j,int x){
-
-	}
-	public static in plus(long 11,log 12){
-		return (int)(11+12);
-	}
-}
----------------------------------------------------------------
-/// The above program will run without any error\\\\\
-""The second method is running with 3 parameters 
-""the third method is running with different parameters data types
-This is called as method overloading
-
-=================================================================================
-=================================================================================
-date:29/07/2026
-===============
-
-public class demo2 {
-    public static void main(String[] args) {
-        System.out.println("from the begin of main.......");
-        int values[] = { 1, 2,3,4,5,6,7,8,9,10};
-        float values1[]={1,2,3,4,5,6,7,8,9,10};
-        for(int count=0;count<values.length;count++)
-        {
-            System.out.println(values[count]);
-        }
-       
-       /* for (int count = 0; count<values.length;count++) {
-            System.out.println(values[count]);
-        }*/
-       for(int i:values){
-        System.out.println(i);
-       }
-
-        System.out.println("from end of main......");
-    }
-}
-------------------------------------------------------------
-public class demo3 {
-    public static void main(String[] args) {
-       /*  double values[]=new double[10];
-        float values1[]=new float[10];
-
-        for(double i:values){
-            System.out.println(i);
-        }
-        for(float i:values1){
-            System.out.println(i);
-        }*/
-       
-       /*
-       int values[]={1,2,3,4,5,6,7};
-       for(int count=0;count<values.length;count++){
-        System.out.println(values[count]);
-        */
-       }
-
-    }
-}
--
-----------------------------------------------
-==============================================================================
-==============================================================================
-date:1/01/2026
-day:saturday
-=============
-public class StringDemo {
-    public static void main(String[] args) {
-        String message = "hello !!!!";
-        System.out.println(message);
-        String greeting = message + "Mohammed shakib";
-        System.out.println(message);
-        System.out.println(greeting);
-    }
-}
------------------------------------------------------
-StringBuffer message=new StringBuffer("Hello !!!!");
-          System.out.println("outcome of using stringBuffer");
-          StringBuffer greeting=message.append("shakib");
-          System.out.println(message.hashCode());
-          System.out.println(greeting.hashCode());
-
-          System.out.println("Outcome of using string objects....");
-          String message1="hello !!!!";
-          String greeting1=message1.concat("shakib");
-          System.out.println(message1.hashCode());
-          System.out.println(greeting1.hashCode());
-
-1)sting buffer is used in multiples it is best suitable for multithreading environment
-2)string builder is uded for single thread tasking 
-------------------------------------------
-d:\Work\java>javap java.lang.StringBuilder
-Compiled from "StringBuilder.java"
-------------------------------------------
-Write a program to display the menu till the user wish 
-and track all the navigation and print it before exiting the applications
-=======================================================================================
-=======================================================================================
-date:5/07/2026
-day:wednesday
-
-software is inherently complex
-tool  is used to reduce the complexity
-
-========================================================================================
-date:12/08/2026
-day:wednesday
-===============
-===========clock.java====================
----------------------------------------------
-public class clock{
-    private int hours;
-    private int minutes;
-    private int seconds;
-
-    public clock(){
-        hours=10;
-        minutes=10;
-        seconds=35;
-    }
-    public void setTime(int h, int m, int s){
+			    public void setTime(int h, int m, int s){
         hours = h;
         minutes = m;
         seconds = s;
     }
-    public void showTime(){
-        System.out.println(hours+"hh "+minutes+"mm "+seconds+"ss ");
-    }
-}
-----------------------------------------
-===========DemoClock.java================
-----------------------------------------
-public class DemoClock{
-    public static void main(String[] args){
-        clock c=new clock();
-        c.showTime();
-        System.out.println("changing the values to our choice")
-        c.setTime(12,12,12);
-        c.showTime();
-    }
-}
-----------------------------------------
-o/p:
-10hh 10mm 35ss
-changing the values to our choice
-12hh 12mm 12ss
 
-thus we can intialize the values we need this is known as constructor with no parametrs and no return type including void
-
-now here instead of initializing the values after every object is created :
-what we can do is :
-Pass the values while creation of an object: This is called parameterized constructor
-thus it makes the program convinient by passing the elemts of our choice while creation instead of writing seperate code for that and calling it everytime
-code for that:
-===============clock.java====================
--------------------------------------------------
-public class clock{
-    private int hours;
-    private int minutes;
-    private int seconds;
-
-    public clock(){
-        hours=10;
-        minutes=10;
-        seconds=35;
-    }
-
-    //here is the new user defined constructor
-    public clock(int h, int m, int s){
-        hours=h;
-        minutes=m;
-        seconds=s;
-    }
-    public void setTime(int h, int m, int s){
-        hours = h;
-        minutes = m;
-        seconds = s;
-    }
-    public void showTime(){
-        System.out.println(hours+"hh "+minutes+"mm "+seconds+"ss ");
-    }
-}
----------------------------------------------
-===========DemoClock.java===================
----------------------------------------------
-public class DemoClock{
-    public static void main(String[] args){
-        clock c=new clock(12,12,12);
-        c.showTime();
-    }
-}
-----------------------------------------
-o/p:
-12hh 12mm 12ss
-
-here we are passing the values to the constructor so that it directly creates the objects with the values we want
-but using these h, m, s 
-*-*
-public clock(int h, int m, int s){
-                 ^      ^      ^
-        hours=h;
-              ^
-        minutes=m;
-                ^
-        seconds=s;
-                ^
-    }
-*-*
-this may create a lot of confusion to us and others who are trying to understand the code
-now here comes the role of "this" keeyword
-
-now we can write it as:
-*-*
-public clock(int hours, int minutes, int seconds){
-        this.hours=hours;
-        this.minutes=minutes;
-        this.seconds=seconds;
-    }
-*-*
-now there hours are local variables of the function and also :
-this -> this keyword is acting as a reference variable to the 'current object' 
-in our code this is calling accessing clock's members 
-
-+moving futher for more refinement of our code:
-*-*
-public clock(){
-        hours=10;
-        minutes=10;
-        seconds=35;
-    }
-*-*     |    //we can change it to
-        \/
-*-----*
-public clock(){
-        this(10 , 10, 35);
-}
-//and also add below function
-public clock(int value){
-        this(value,value,value);
-}
-*-----*
-the second clock function takes one input and assign it to hours, minutes, seconds
-
-and futher enhacement of our code: 
-like taking only 23:59:59 as max Time
-and throwing error if exceeded;
-
-//final code:
-
-===============clock.java====================
--------------------------------------------------
-public class clock{
-    private int hours;
-    private int minutes;
-    private int seconds;
-
-    public clock(){
-        this(10 , 10, 35);
-
-    }
-    public clock(int value){
-        this(value,value,value);
-    }
-    public clock(int hours, int minutes, int seconds){
-        if(hours>=0 && hours<=23 && minutes>=0 && minutes<=59 && seconds>=0 && seconds<=59){
-            this.hours = hours;
-            this.minutes = minutes;
-            this.seconds = seconds;
-        }
-        else{
-            throw new IllegalArgumentException("invalid values to time......");
-        }
-    }
-    public void setTime(int h, int m, int s){
-        hours = h;
-        minutes = m;
-        seconds = s;
-    }
-    public void showTime(){
-        System.out.println(hours+"hh "+minutes+"mm "+seconds+"ss ");
-    }
-}
----------------------------------------------
-===========DemoClock.java===================
----------------------------------------------
-public class DemoClock{
-    public static void main(String[] args){
-        System.out.println("checking the constructor");
-        clock c=new clock();
-        c.showTime();
-        System.out.println("\nchecking the  parametarized constructor");
-        clock d=new clock(12,12,13);
-        c.showTime();
-        System.out.println("\nchecking the single parameter constructor");
-        clock e =new clock(10);
-        c.showTime();
-        System.out.println("checking if the clock goes beyond 24 hrs");
-        clock f=new clock(25,32,21);
-        c.showTime();
-    }
-}
-----------------------------------------
-
-o/p:
-checking the constructor
-10hh 10mm 35ss
-
-checking the  parametarized constructor
-10hh 10mm 35ss
-
-checking the single parameter constructor
-10hh 10mm 35ss
-checking if the clock goes beyond 24 hrs
-Exception in thread "main" java.lang.IllegalArgumentException: invalid values to time......
-        at clock.<init>(clock.java:20)
-        at DemoClock.main(DemoClock.java:13)
-
-//perfect 
-A method wothout body is called abstract
-===============================================================================
-===============================================================================
-date:21/09/2026
-===============
-
-t
+	java -verbose demo

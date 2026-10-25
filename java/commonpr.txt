@@ -1,0 +1,81 @@
+how two application (java application)running on two different machines can communicate (talk to each other)?
+when they are uniquely discoverable or identifiable.
+applicationruns inside the OS and OS runs inside a machine.
+each machine connected in the network is uniquely identifed with its number--->IP Address 
+
+even our machine is given with an IP Address even, when not connected in the network
+127.0.0.1 (localhost) loop back Address.
+
+Every program running inside the machineis uniquely identified withits Ports Number 
+where Ports Numberis an unsigned 16 bit value 
+whose range is 0=65535
+IP Address +Ports Number --->Socket,where Socket is one end point of communication ,we require two end points to have communication possible.
+through we require two end points to have  communication, but one end pointshould have more ability i.e, the connection 
+
+import java.io.*;
+import java.net.*;
+
+public class Client{
+    public static void main(String[] args) {
+        String input=args[0];
+        byte buffer[]= new byte[1024];
+        Socket clientSocket=null;
+        try{
+        clientSocket =new Socket(InetAddress.getLocalHost(), 12345);
+        //System.out.println("connected to the Server "+clientsocket);
+        OutputStream os=clientSocket.getOutputStream();
+        os.write(input.getBytes());
+        InputStream is=clientSocket.getInputStream();
+        is.read(buffer);
+        System.out.println(new String(buffer).trim());
+        }catch(IOException ie){
+            ie.printStackTrace();
+        }
+        finally{
+            if(clientSocket!=null){
+                try {
+                    clientSocket.close();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
+    }
+}
+
+import java.io.*;
+import java.net.*;
+
+public class Server{
+
+    public static void main(String[] args) {
+        ServerSocket serverSocket = null;
+        byte buffer[]=new byte[1024];
+        try {
+            serverSocket = new ServerSocket(12345);
+            System.out.println("Server started and waiting for client to connect...");
+            while(true){
+            Socket localSocket=serverSocket.accept();
+            //System.out.println("localsocket on server socket "+localSocket);
+            InputStream is=localSocket.getInputStream();
+            is.read(buffer);
+            String message="Hello from server...."+new String(buffer).trim();
+            OutputStream os =localSocket.getOutputStream();
+            os.write(message.getBytes());
+            os.flush();
+            //System.out.println("from client..."+new String(buffer).trim());
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }finally{
+            if(serverSocket!=null)
+            try {
+                serverSocket.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+    }
+}

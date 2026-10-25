@@ -1,0 +1,17 @@
+a jewelry store layout is represented as a id grid of points you want to place exactly 3 security cameras 
+at different points such that the distance between the first and the third camera is exactly a target 
+value k find how many valid combinations of 3 points exist
+
+input constraints:
+Num of grid poitns (N) 3<=n<=300
+Target distance (K) 1<=k_=10 power 5   ===>> 1,00,000
+coordinates(\(x_{i}\)): sorted strictly increasing  \(0<= X<=10^5)
+
+
+
+solution 
+
+shop with grid ids of points 
+
+3 cameras at different points 
+du

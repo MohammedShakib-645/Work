@@ -1,0 +1,1 @@
+//An automated fulfillment center routes packages across an assembly track.You receive a sensor array that reads packages weight.The data exhibits a unique physical patttern:weights steadily increase to a peak maximum loading threshold due to scale acceleration,and then a drop off cleanly as pkg leave the stationn.Find the absolute maximum weight threshold

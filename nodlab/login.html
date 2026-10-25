@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login Page</title>
+    </head>
+    <body>
+        <h1>Login Page</h1>
+        <label for="userName">userName:</label>
+        <input type="text" id="userName"><br><br>
+        <label for="pwd">Password:</label>
+        <input type="password" id="pwd"><br><br>
+        <button onclick="login()">Login</button>
+        <script>
+            function login(){
+                let userName=document.getElementById("userName").value;
+                let Password=document.getElementById("pwd").value;
+               const uName="admin";
+               const pwd="admin@123";
+               if(uName===userName && pwd===Password){
+                // window.alert("Login Successful");
+                sessionStorage.setItem("username", userName);
+                window.location.href = "success.html";
+                               }
+               else
+               window.alert("Login Failed");
+            }
+        </script>
+
+    </body>
+
+</html>

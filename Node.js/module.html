@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Module Utilization</title>
+</head>
+<body>
+    <h1>Consume add and mul functions from math module</h1>
+    <p id="add">Addition:</p>
+    <p id="mul">Product of:</p>
+    <script type="module">
+        import {add,mul} from './math.js';
+        let res=add(10,20);
+        document.getElementById("add").innerText=`Addition:${res}`;
+        let prod=mul(2,3);
+        document.getElementById("mul").innerText=`product of:${prod}`;
+    </script>
+</body>
+</html>

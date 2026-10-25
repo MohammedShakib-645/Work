@@ -1,0 +1,52 @@
+COA Is the Oldest subject and most important subject in cse.
+Pressing the start button on computer
+ ---> SMPS ( Switched Mode power Supply) # distributing the 220V supply to all the parts of the   
+      Computer.
+ ---> POST (Power on self test)#SMPS will check if the power supply is within the proper limit     
+      or not
+ ---> BIOS (Basic Input Output System) # Checks if the Input and output devices are successfully connected or not.
+      The black screen appears when we start a pc, it means the BIOS is being setup, it can be cancelled by keystroke or esc button press.
+ ---> Boot straploader - Loads the operating system from hard disk (Permanent storage and non - volatile as it does not use capacitors for storing electric charge from the main memory(Volatile and made of capacitors, due to the property of  capacitors, it can hold the charge only for some time)
+ ---> 8 GB -> 2^36 bits.
+      OS will get successfully loaded when boot straploader is done
+ ---> Refreshing logic refreshes the capacitor, so that 1 remains 1 and 0 remains 0. ( Data will not get altered). 
+      On shutting down the computer, 1 becomes 0 and 0 becomes 1.
+ ---> Hardware configuration and structure changed a lot since 1950s
+ ---> Development in hardware technology 
+      Main memory is constructed in capacitors.
+      Capacitors are very cheap to purchase
+ ---> Flip - Flop technology , 
+      
+
+
+
+
+
+
+				Computer Organization (MOSTLY Syllabus) and Architecture
+
+
+   		-----> Computer Architecture?
+		
+		       Deals with what? (Purpose)
+    		(64-Bit or 32 bit?) CPU? Main memory? RAM? ROM? 
+
+ 		-----> Computer Organization (CPU and Main memory communication).
+		       Deals with How?  (Function)
+			
+		       Physical level implementation. (Hardware)
+		       Modifications in hardware.
+		       Multiplication logic in i3. (Multithreading?)
+		-----> Purchasing a car example - 
+		       Hydraulic braking system.
+		       Disc System.
+
+
+		       Block Diagram
+		
+			CPU <----------------------------------------> Main Memory
+
+			CPU INTERACTS with only Main Memory DIRECTLY 
+			Data rate and Data representation are reasons for Indirect accesssing.
+			OS is based on CN ( Computer Networking)
+			

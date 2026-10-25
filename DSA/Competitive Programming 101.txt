@@ -1,0 +1,64 @@
+				Competitive Programming 101
+	
+
+	Data structures and Algorithms
+
+---> Organizing Data in structured manner?
+---> Efficiency?
+---> Deploying them on software ?
+---> Conveniency?
+
+Accessing the data becomes fast with help of DSA.
+Time complexity , Space Complexity reduces due to DSA.
+
+WHY? Purpose
+WHERE? Use
+HOW? Implementation
+
+Data structures types
+--> linear Data structures ( Sequential)
+    	
+    Queues , Stacks, Linked lists, Arrays
+--> Non linear Data structures( heirarchial)
+    Trees, Graphs
+
+    Array can be used as static and dynamic data structure.
+    Dynamic array costs more for the company, so array is used statically
+  
+    Linked list is dynamic sized.
+    We need to reduce the resources required for making the data structure.
+    Logic building skills using DSA.
+
+We have many algorithms to solve problems.
+   Djikshitras algorithm, Tower of Hanoi , Sorting algorithm
+
+   Stack can be used for handling multiple users or requests at once.
+   To access the recently added data. ( By leveraging LIFO Principle)
+   Browser history, Whatsapp chat history is example of STACK.
+   
+   Queue can be used to access the first added data
+
+   To handle user traffic.
+   Queue is important to implement "Fairness" and "Equality" in terms of which user accesses or uses the product first.
+   Example - Printer uses queue data structure in order of the files which we put.
+   Queues can be stored in memory using linked list.
+
+   Why linked list?
+   Used because of Dynamic sized allocation, Easy traversing with help of pointers.
+   Used in Youtube Video playlist ( Double linked list)  to go both front and back
+           Looping Audio song ( Circular linked list)  to go back to the initial point
+   
+   Trees and Graphs
+
+   ---> Company structure vs Company gossips
+	         Tree     vs		Graphs
+         Example		     Example
+        The hierarchy of     Can have any form of hierarchy
+	Designations like    Loops and cycles exist in graphs
+	principal, HODS,     Multiple paths exist in graphs
+	Faculty, Students    Instagram uses graphs.
+	Family trees	     Multiple paths to a node exist due to graph design being 
+ 	Used to represent    
+        Data in heirarchial manner.
+
+ 

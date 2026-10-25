@@ -4,7 +4,7 @@ public class smarAtm {
     public static void main(String args[]) {
         int fixedCode = 1111;
         int pin, attempts = 3;
-        int balance = 5000;
+        int balance = 1000;
         double depositAmount;
         double withdrawAmount;
         Scanner sc = new Scanner(System.in);
@@ -21,7 +21,6 @@ public class smarAtm {
         }
         if (attempts == 0) {
             System.out.println("Your card is blocked:");
-            sc.close();
             return;
         }
         while (true) {
@@ -52,7 +51,6 @@ public class smarAtm {
                     break;
                 case 4:
                     System.out.println("exit");
-                    sc.close();
                     return;
                 default:
                     System.out.println("incorrect pin");

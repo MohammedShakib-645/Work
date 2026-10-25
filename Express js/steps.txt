@@ -1,0 +1,465 @@
+step 1 
+create project folder
+
+step 2
+open project folder using vs code
+
+step 3
+open terminal in vs code
+
+step 4
+>npm init -y
+
+step 5
+>npm i express
+
+step 6
+create app.js and write the following code:
+
+app.js:
+-----------------------------------------------------
+const express=require("express")
+const app=express()
+
+const port=5000
+app.listen(port, ()=>{
+    console.log("Server is running successfully")
+})
+------------------------------------------------------
+
+step 7
+configure the configure.json file
+
+package.json:
+-------------------------------------------------------
+"scripts":{
+    "test":"echo \"Error:no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+------------------------------------------------------
+
+step 8
+>npm start
+
+step 9
+>npm i nodemon
+
+      Q: wht is nodemon?
+     ans:Nodemon is a development tool for Node.js that automatically restarts the application 
+         whenever project files are modified, making development faster and more efficient
+     in own words: (use of nodemon: if we made any changes, we can directly execute it automatically-without interruption in the server)
+
+step 10
+configure package.json 
+
+package.json:
+-------------------------------------------------------
+"scripts":{
+    "test":"echo \"Error:no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+------------------------------------------------------
+
+step 11
+test with nodemon
+
+
+
+
+const app = express();
+
+let employee = [];
+// Middleware to read form data
+app.use(express.urlencoded({ extended: true }));
+
+
+<h1>Company Employee Management System</h1>
+        <p>Register and manage company employees.</p>
+
+        <a href="/employees">View All Employees</a>
+
+        <h2>Register New Employee</h2>
+
+        <form action="/register" method="POST">
+            <label>Employee Name:</label>
+            <input type="text" name="name" required><br><br>
+
+            <label>Employee ID / Employee Number:</label>
+            <input type="number" name="employeeNumber" required><br><br>
+
+            <label>Department:</label>
+            <input type="text" name="department" required><br><br>
+
+            <button type="submit">Register Employee</button>
+        </form>
+    `);
+});
+//Fetch all students from the database
+student.get("/students", async (req, res)) => {
+    try{
+        const students = await Student.find();
+        const sdata = students
+        .map((s,index)=> `<p>${index + 1}. <b>Name:</b> ${s.name} | <b>Roll No:</b> ${s.rollnumber}</p>`)
+        .join("");
+        
+        res.send(`
+            <!DOCTYPE HTML>
+            <html>
+              <body>
+                <h2>Registered Students</h2>
+                ${sdata || "<p> No students found .</p>"}
+                <br/>
+                <a href = "/">Back to home</a>
+              </body>
+            </html>
+            `);
+    }
+
+
+
+    
+// Register New Employee
+app.post("/register", (req, res) => {
+    const newEmployee = {
+        id: employee.length + 1,
+        name: req.body.name,
+        employeeNumber: Number(req.body.employeeNumber),
+        department: req.body.department
+    };
+
+    employee.push(newEmployee);
+
+    res.redirect("/students");
+});
+
+student.
+// Middleware for /employees
+app.use("/employees", (req, res, next) => {
+    console.log("Employee list accessed");
+    next();
+});
+
+
+app.get("/employees", (req, res) => {
+    res.json(employee);
+});
+app.get("/employees/:id", (req, res) => {
+    const id = Number(req.params.id);
+
+    const emp = employee.find((e) => e.id === id);
+
+    if (!emp) {
+        return res.send("Employee not found");
+    }
+
+    res.send(`
+        <h1>Employee Details</h1>
+        <p>Employee ID: ${emp.id}</p>
+        <p>Name: ${emp.name}</p>
+        <p>Employee Number: ${emp.employeeNumber}</p>
+        <p>Department: ${emp.department}</p>
+
+        <a href="/employees">Back to Employees</a>
+    `);
+});
+
+app.listen(3000, () => {
+    console.log("Employee Registration System running on http://localhost:3000");
+});
+
+
+
+const express=require('express')
+const mongoose=require('mongoose')
+const dotEnv=require('dotenv')
+const bodyParser=require('body-parser')
+const app=express();
+dotEnv.config()
+const PORT=process.env.PORT
+app.use(bodyParser.json())
+const employeeRoutes=require('./routes/employeeRoutes')
+app.use('/employee',employeeRoutes)
+
+mongoose.connect(process.env.MONGO_URL)
+    .then(()=>{
+        console.log("MongoDB connected successfully")
+    })
+    .catch((error)=>{
+        console.log("Error:",error)
+    })
+app.listen(PORT,()=>{
+    console.log(`Server started successfully on Port ${PORT}`)
+})
+
+
+
+
+
+
+
+
+const express=require('express')
+const mongoose=require('mongoose')
+const dotenv=require('dotenv')
+const bodypraser=require('body-parser')
+const app=express()
+dotenv.config()
+const PORT=process.env.PORT
+
+app.use(bodypraser.json())
+const employeeRoutes=require('./routes/employeeRoutes')
+const employee = require('./models/employee')
+
+app.get('/',(req,res)=>{
+    res.status(200).json(employee)
+})
+
+app.use('/employee',employeeRoutes)
+mongoose.connect(process.env.MONGO_URL)
+    .then(()=>{
+        console.log("MongoDB Connected Successfully")
+    })
+    .catch((error)=>{
+        console.log("ERROR:",error)
+    })
+
+app.listen(PORT,()=>{
+    console.log(`Server started successfully on port ${PORT}`)
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const express = require("express");
+const mongoose = require("mongoose");
+const app = express();
+const port = 5000;
+
+app.use(express.urlencoded({ extended: true }));
+
+// Connect to MongoDB
+mongoose
+  .connect("mongodb://127.0.0.1:27017/employeeDB")
+  .then(() => console.log("Connected to MongoDB successfully!"))
+  .catch((err) => console.error("Database connection error", err));
+
+// Schema & Model Definition
+const employeeSchema = new mongoose.Schema({
+    name: {
+        type: String,
+        required: true,
+    },
+    employeeNumber: {
+        type: Number,
+        required: true,
+        unique: true,
+    },
+    department: {
+        type: String,
+        required: true,
+    }
+});
+
+const Employee = mongoose.model("Employee", employeeSchema);
+
+// Home Page
+app.get("/", (req, res) => {
+    res.send(`
+        <h1>Company Employee Management System</h1>
+        <p>Register and manage company employees.</p>
+
+        <a href="/employees">View All Employees</a>
+
+        <h2>Register New Employee</h2>
+
+        <form action="/register" method="POST">
+            <label>Employee Name:</label>
+            <input type="text" name="name" required><br><br>
+
+            <label>Employee ID / Employee Number:</label>
+            <input type="number" name="employeeNumber" required><br><br>
+
+            <label>Department:</label>
+            <input type="text" name="department" required><br><br>
+
+            <button type="submit">Register Employee</button>
+        </form>
+    `);
+});
+
+// Middleware for /employees
+app.use("/employees", (req, res, next) => {
+    console.log("Employee list accessed");
+    next();
+});
+
+// Fetch all employees from the database
+app.get("/employees", async (req, res) => {
+    try {
+        const employees = await Employee.find();
+        const employeeList = employees.length
+            ? employees
+                .map(
+                    (e, index) =>
+                        `<p>${index + 1}. <b>Name:</b> ${e.name} | <b>Employee Number:</b> ${e.employeeNumber} | <b>Department:</b> ${e.department}</p>`
+                )
+                .join("")
+            : "<p>No employees found.</p>";
+
+        res.send(`
+            <!DOCTYPE html>
+            <html>
+              <body>
+                <h2>Registered Employees</h2>
+                ${employeeList}
+                <br/>
+                <a href="/">Back to home</a>
+              </body>
+            </html>
+        `);
+    } catch (error) {
+        console.error("Error fetching employees:", error);
+        res.status(500).send("Error fetching employees");
+    }
+});
+
+// Register New Employee
+app.post("/register", async (req, res) => {
+    try {
+        const newEmployee = new Employee({
+            name: req.body.name,
+            employeeNumber: Number(req.body.employeeNumber),
+            department: req.body.department
+        });
+
+        await newEmployee.save();
+        res.redirect("/employees");
+    } catch (error) {
+        console.error("Error registering employee:", error);
+        res.status(500).send("Error registering employee");
+    }
+});
+
+// Get employee by ID
+app.get("/employees/:id", async (req, res) => {
+    try {
+        const emp = await Employee.findById(req.params.id);
+        if (!emp) {
+            return res.status(404).send("Employee not found");
+        }
+
+        res.send(`
+            <h1>Employee Details</h1>
+            <p>Employee ID: ${emp.id}</p>
+            <p>Name: ${emp.name}</p>
+            <p>Employee Number: ${emp.employeeNumber}</p>
+            <p>Department: ${emp.department}</p>
+
+            <a href="/employees">Back to Employees</a>
+        `);
+    } catch (error) {
+        console.error("Error fetching employee:", error);
+        res.status(500).send("Error fetching employee");
+    }
+});
+
+app.listen(port, () => {
+    console.log(`Employee Registration System running on http://localhost:${port}`);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const Employee = require('../Model/Employee');
+
+const createEmployee = async (req, res) => {
+    try {
+        const { employeeId, name, email, phone, city } = req.body;
+
+        const employee = new Employee({ 
+            employeeId, 
+            name, 
+            email, 
+            phone, 
+            city 
+        });
+        await employee.save();
+        res.status(201).json(employee);
+    } catch (error) {
+        console.error('There is an error:', error);
+        res.status(500).json({ message: 'Server Error' });
+    }
+};
+const getEmployees = async (req, res) => {
+    try {
+        const employees= await Employee.find();
+        res.status(200).json(employees);
+    }
+    catch (error) {
+        console.error('There is an error:', error);
+        res.status(500).json({ message: 'Server Error' });
+    }
+};
+const updateEmployee=async(req,res)=>{
+    try{
+        const { employeeId,name,email,phone,city}=req.body
+        const myEmployee=await Employee.findByIdAndUpdate(req.params.id,{employeeId,name,email,phone,city})
+        if(!myEmployee){
+            return res.status(404).json({message:'employee not found'})
+        }
+        res.status(202).json(myEmployee)
+    }catch(error){
+        console.error("There is an error",error);
+        res.status(500).json({message:"server error"});
+    }
+}
+const deleteEmployee=async(req,res)=>{
+    try{
+        const deleteEmployee=await Employee.findByIdAndDelete(req.params.id)
+        res.status(204).send()
+    }
+    catch(error){
+        console.error("There is an error:",error);
+        res.status(500).json({message:"server error"});
+    }
+}
+
+module.exports = {createEmployee,getEmployees,updateEmployee,deleteEmployee};

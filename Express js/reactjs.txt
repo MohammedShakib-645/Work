@@ -1,0 +1,25 @@
+React JS
+Libbrary to develop the fronted web applications
+3 elements 
+component
+props
+state 
+--------------------
+Single page applications(SPA)
+___________________
+reduce the traffic
+use less Internet 
+         
+        Class based->classes->states
+         /
+component                                 use states
+         \                               /
+        Functions Based->Functions->horks
+                                         \
+                                        use effect
+CROS -Cross Origin Resolve Showing 
+npm install CROS
+Vite----Develop Server Build Tool
+new terminal
+>npm create Vite@Calcst..
+view-----target

@@ -1,0 +1,5 @@
+you are given an array prices where prices in the price of a given stock on the ith day 
+you want to maximize your profit by choosing a single day to buy one stock and choosing the a different day in the future to sell that stock 
+return the maximum profit you can achieve form this transaction if you cant achieve any profit return 0
+
+inputs: 7,1,5,3,6,4

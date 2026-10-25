@@ -20,12 +20,10 @@ public class FSDemo {
             e.printStackTrace();
         } finally {
             try {
-                if (fis != null) {
+                if (fis != null) 
                     fis.close();
-                }
-                if (fos != null) {
-                    fos.close();
-                }
+                if (fos != null) 
+                    fos.close();          
             } catch (IOException e) {
                 e.printStackTrace();
             }
