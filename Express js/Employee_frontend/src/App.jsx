@@ -1,0 +1,59 @@
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+import Navbar from './component/Navbar';
+import AddEmployee from './component/AddEmployee';
+import EmployeeList from './component/EmployeeList';
+import './App.css';
+
+function App() {
+    const [activeTab, setActiveTab] = useState('list');
+    const [employees, setEmployees] = useState([]);
+    const [loading, setLoading] = useState(false);
+
+    // Fetch all employees from Node API
+    const fetchEmployees = async () => {
+        setLoading(true);
+        try {
+            const response = await axios.get('http://localhost:5000/employee/allemployees');
+            if (Array.isArray(response.data)) {
+                setEmployees(response.data);
+            } else {
+                setEmployees([]);
+            }
+        } catch (error) {
+            console.error('Error fetching employees:', error);
+            setEmployees([]);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    useEffect(() => {
+        void Promise.resolve().then(fetchEmployees);
+    }, []);
+
+    const handleEmployeeAdded = () => {
+        fetchEmployees();
+        setActiveTab('list');
+    };
+
+    return (
+        <div className="app-container">
+            <Navbar activeTab={activeTab} setActiveTab={setActiveTab} />
+            <main className="main-content">
+                {activeTab === 'list' && (
+                    <EmployeeList
+                        employees={employees}
+                        loading={loading}
+                        onRefresh={fetchEmployees}
+                    />
+                )}
+                {activeTab === 'add' && (
+                    <AddEmployee onEmployeeAdded={handleEmployeeAdded} />
+                )}
+            </main>
+        </div>
+    );
+}
+
+export default App;

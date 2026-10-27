@@ -1,0 +1,16 @@
+we need to have a clear sketch of the application.
+ALL UI components and their actions tp be perfomred.
+
+the application is usually developed with the follwoing standards 
+1.extend your class from frame or jframe
+2.declare all the ui components at one place (class level)
+3.constructor should abstract the application and make it accessible (visible)
+4.implement the appropriate listeners either with the class or
+make them anonymous (based on your need)
+
+public class NotepadApp extends frame implements ActionListener{
+
+}
+5.register the listeners with the appropriate sources (so as to take the appropriate actions whene the user interacts with the components)
+eg: btnLogin.addActionListener(this);
+btnLogin.addActionListener(new NotepadApp());
